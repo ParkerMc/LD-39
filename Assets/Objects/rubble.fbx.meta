@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 552eeca309f8f4ad88a594d66c6e3a3c
-timeCreated: 1501308992
+guid: 05920fe48c9b04907a53b3e463a8f609
+timeCreated: 1501354563
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
-    4300002: doorway
+    4300000: rubble_pile
   materials:
     importMaterials: 1
     materialName: 0
@@ -46,7 +45,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
