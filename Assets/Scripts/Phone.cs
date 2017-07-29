@@ -12,12 +12,10 @@ public class Phone : MonoBehaviour {
 	private Vector3 oldPos;
 
 	public UnityEngine.UI.Image screen;
+	public UnityEngine.UI.Button mapButton;
 	public float moveSpeed;
 	public float zoomSpeed;
 
-	void Start(){
-		
-	}
 	void FixedUpdate(){
 		if (Input.GetButton ("Fire1")&&!moving) {
 			if (!open) {
@@ -34,6 +32,7 @@ public class Phone : MonoBehaviour {
 				Player_look.lockMouse = true;
 				moving = true;
 				screen.color = new Color32(0, 0, 0, 255);
+				mapButton.gameObject.SetActive(false);
 				Cursor.lockState = CursorLockMode.Locked;
 				rt = this.GetComponent<RectTransform> ();
 				oldPos = rt.position;
@@ -57,6 +56,7 @@ public class Phone : MonoBehaviour {
 			if (x == -120 && y == -200 && size == 4) {
 				moving = false;
 				screen.color = new Color32(255, 255, 255, 225);
+				mapButton.gameObject.SetActive(true);
 			}
 			rt.localScale = new Vector3 (size, size, size);
 			rt.localPosition = new Vector3 (x, y, rt.localPosition.z);

@@ -6,11 +6,6 @@ public class Player_look : MonoBehaviour {
 	public float sensitivity = 20;
 	public static bool lockMouse = true;
 
-	void Start(){
-		Rigidbody rb = this.GetComponent<Rigidbody> ();
-		rb.freezeRotation = true;
-	}
-
 	void FixedUpdate () {
 		if(Input.GetKeyDown(KeyCode.Escape)) {
 			Cursor.lockState = CursorLockMode.None;
