@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06875683, g: 0.07166236, b: 0.07704938, a: 1}
+  m_IndirectSpecularColor: {r: 0.06875683, g: 0.071662344, b: 0.07704934, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1819,13 +1819,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214399958}
-  m_LocalRotation: {x: 0.2679441, y: 0.3729067, z: 0.058312897, w: 0.8864233}
-  m_LocalPosition: {x: -15.43, y: 3.64, z: -3.88}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.409, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 25.565, y: 50.13, z: 19.641}
+  m_Father: {fileID: 1516378487}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216915868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,9 +2299,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1516378482}
   m_LocalRotation: {x: -0, y: 0.36956245, z: -0, w: 0.9292059}
-  m_LocalPosition: {x: -15.93, y: 3.93, z: -3.72}
+  m_LocalPosition: {x: -15.93, y: 5.04, z: -3.72}
   m_LocalScale: {x: 4, y: 4, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1214399960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 43.377003, z: 0}
@@ -2316,7 +2317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73d08296e9344626b8390b94cf99af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
+  sensitivity: 200
   jumpSpeed: 60
 --- !u!114 &1516378489
 MonoBehaviour:
@@ -2329,7 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f9282d058764dcea4659f03ccc06b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 20
+  sensitivity: 100
 --- !u!136 &1516378490
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2339,10 +2340,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.29
+  m_Height: 1.25
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.34, z: 0}
 --- !u!54 &1516378491
 Rigidbody:
   m_ObjectHideFlags: 0
