@@ -20,7 +20,7 @@ public class Player_move : MonoBehaviour {
 		if (Input.GetButton ("Fire3")) {
 			speed = 2f;
 		}
-		rb.velocity = new Vector3 (0, rb.velocity.y, 0) + ( Zaxes * speed * new Vector3 (transform.forward.x,0,transform.forward.z)) + ( Xaxes * speed * new Vector3 (transform.right.x,0,transform.right.z)) * Time.deltaTime * sensitivity;
+		rb.velocity = new Vector3 (0, rb.velocity.y, 0) + (Zaxes * new Vector3 (transform.forward.x,0,transform.forward.z)) + ( Xaxes * new Vector3 (transform.right.x,0,transform.right.z)) * Time.deltaTime  * speed * sensitivity;
 		//Jump
 		if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
 			rb.AddForce (Vector3.up * jumpSpeed);

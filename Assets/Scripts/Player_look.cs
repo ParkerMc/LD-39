@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_look : MonoBehaviour {
 	public float sensitivity = 20;
+	public static bool lockMouse = true;
 
 	void Start(){
 		Rigidbody rb = this.GetComponent<Rigidbody> ();
@@ -13,7 +14,7 @@ public class Player_look : MonoBehaviour {
 	void FixedUpdate () {
 		if(Input.GetKeyDown(KeyCode.Escape)) {
 			Cursor.lockState = CursorLockMode.None;
-		}else if (Input.GetMouseButtonDown (0)) {
+		}else if (Input.GetMouseButtonDown (0)&&lockMouse) {
 			Cursor.lockState = CursorLockMode.Locked;
 		}
 		if (Cursor.lockState == CursorLockMode.Locked) {
