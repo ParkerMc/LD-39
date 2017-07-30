@@ -6,10 +6,44 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cube
+    100004: doorway
+    100006: floor
+    100008: pillar
+    100010: rubble_pile
+    100012: torch
+    100014: wall
     400000: //RootNode
+    400002: Cube
+    400004: doorway
+    400006: floor
+    400008: pillar
+    400010: rubble_pile
+    400012: torch
+    400014: wall
     2300000: //RootNode
+    2300002: Cube
+    2300004: doorway
+    2300006: floor
+    2300008: pillar
+    2300010: rubble_pile
+    2300012: torch
+    2300014: wall
     3300000: //RootNode
+    3300002: Cube
+    3300004: doorway
+    3300006: floor
+    3300008: pillar
+    3300010: rubble_pile
+    3300012: torch
+    3300014: wall
     4300000: Cube
+    4300002: rubble_pile
+    4300004: floor
+    4300006: torch
+    4300008: pillar
+    4300010: wall
+    4300012: doorway
   materials:
     importMaterials: 1
     materialName: 0

@@ -20,10 +20,10 @@ public class Player_move : MonoBehaviour {
 		if (Input.GetButton ("Fire3")) {
 			speed = 2f;
 		}
-		rb.velocity = (new Vector3 (0, rb.velocity.y, 0) + (Zaxes * new Vector3 (Camera.main.transform.forward.x,0,Camera.main.transform.forward.z)) + ( Xaxes * new Vector3 (Camera.main.transform.right.x,0,Camera.main.transform.right.z))) * Time.deltaTime  * speed * sensitivity;
+		rb.velocity = ((Zaxes * new Vector3 (Camera.main.transform.forward.x,0,Camera.main.transform.forward.z)) + ( Xaxes * new Vector3 (Camera.main.transform.right.x,0,Camera.main.transform.right.z))) * Time.deltaTime  * speed * sensitivity + new Vector3 (0, rb.velocity.y, 0);
 		//Jump
-		if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
-			rb.AddForce (Vector3.up * jumpSpeed);
-		}
+		//if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
+		//	rb.AddForce (Vector3.up * jumpSpeed);
+		//}
 	}
 }

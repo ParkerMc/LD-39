@@ -1,50 +1,16 @@
 fileFormatVersion: 2
-guid: 670802bc098604115ab7ae7939ecdd03
-timeCreated: 1501309105
+guid: 62d9c80bd3b5643afa7885793985ad38
+timeCreated: 1501391196
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cube
-    100004: doorway
-    100006: floor
-    100008: pillar
-    100010: rubble_pile
-    100012: torch
-    100014: wall
     400000: //RootNode
-    400002: Cube
-    400004: doorway
-    400006: floor
-    400008: pillar
-    400010: rubble_pile
-    400012: torch
-    400014: wall
     2300000: //RootNode
-    2300002: Cube
-    2300004: doorway
-    2300006: floor
-    2300008: pillar
-    2300010: rubble_pile
-    2300012: torch
-    2300014: wall
     3300000: //RootNode
-    3300002: Cube
-    3300004: doorway
-    3300006: floor
-    3300008: pillar
-    3300010: rubble_pile
-    3300012: torch
-    3300014: wall
-    4300000: Cube.002
-    4300002: pillar
-    4300004: Cube
-    4300006: rubble_pile
-    4300008: floor
-    4300010: torch
-    4300012: wall
-    4300014: doorway
+    4300000: hallFloor
+    6400000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,7 +46,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
