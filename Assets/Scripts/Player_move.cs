@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player_move : MonoBehaviour {
 	public float sensitivity = 50f;
 	public float jumpSpeed = 60f;
+
+	public static bool move = true;
+
 	private float disToGround;
 
 	void Start(){
@@ -12,18 +15,20 @@ public class Player_move : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		//Move along x and z
-		float Xaxes =  Input.GetAxis("Horizontal");
-		float Zaxes =  Input.GetAxis("Vertical");
-		Rigidbody rb = this.GetComponent<Rigidbody>();
-		float speed = 1f;
-		if (Input.GetButton ("Fire3")) {
-			speed = 2f;
+		if(move){
+			//Move along x and z
+			float Xaxes =  Input.GetAxis("Horizontal");
+			float Zaxes =  Input.GetAxis("Vertical");
+			Rigidbody rb = this.GetComponent<Rigidbody>();
+			float speed = 1f;
+			if (Input.GetButton ("Fire3")) {
+				speed = 2f;
+			}
+			rb.velocity = ((Zaxes * new Vector3 (Camera.main.transform.forward.x,0,Camera.main.transform.forward.z)) + ( Xaxes * new Vector3 (Camera.main.transform.right.x,0,Camera.main.transform.right.z))) * Time.deltaTime  * speed * sensitivity + new Vector3 (0, rb.velocity.y, 0);
+			//Jump
+			//if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
+			//	rb.AddForce (Vector3.up * jumpSpeed);
+			//}
 		}
-		rb.velocity = ((Zaxes * new Vector3 (Camera.main.transform.forward.x,0,Camera.main.transform.forward.z)) + ( Xaxes * new Vector3 (Camera.main.transform.right.x,0,Camera.main.transform.right.z))) * Time.deltaTime  * speed * sensitivity + new Vector3 (0, rb.velocity.y, 0);
-		//Jump
-		//if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
-		//	rb.AddForce (Vector3.up * jumpSpeed);
-		//}
 	}
 }

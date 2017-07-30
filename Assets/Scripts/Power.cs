@@ -7,17 +7,21 @@ public class Power : MonoBehaviour {
 	private static int power = 20;
 	private static float powfloat = 1;
 
+	public static bool pause = false;
+
 	public Light flashlight;
 	public UnityEngine.UI.Text text;
 	public float lightPower;
 
 	public static void TakePower(float amount){
-		powfloat -= amount;
-		while (powfloat <= 0) {
-			powfloat += 1;
-			power -= 1;
-			if (power < 0) {
-				power = 0;
+		if (!pause) {
+			powfloat -= amount;
+			while (powfloat <= 0) {
+				powfloat += 1;
+				power -= 1;
+				if (power < 0) {
+					power = 0;
+				}
 			}
 		}
 	}
