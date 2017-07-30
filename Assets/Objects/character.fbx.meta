@@ -268,6 +268,7 @@ ModelImporter:
     7400020: Arm_Armature|Arm_ArmatureAction
     7400022: Arm_Armature|armsDown
     7400024: phone|armsDown
+    7400026: Arm_Armature|TurnOnPhone
     9500000: //RootNode
     13700000: Arm_Mesh
   materials:
@@ -607,6 +608,34 @@ ModelImporter:
       takeName: phone|CubeAction
       firstFrame: 0
       lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_Armature|TurnOnPhone
+      takeName: Arm_Armature|TurnOnPhone
+      firstFrame: 0
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
