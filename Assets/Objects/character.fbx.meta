@@ -115,6 +115,7 @@ ModelImporter:
     100214: TwistTh_R
     100216: TwistThumb_L
     100218: TwistThumb_R
+    100220: phone
     400000: Arm_Armature
     400002: Arm_L
     400004: Arm_Mesh
@@ -225,6 +226,7 @@ ModelImporter:
     400214: TwistTh_R
     400216: TwistThumb_L
     400218: TwistThumb_R
+    400220: phone
     2300000: SH_Arm
     2300002: SH_ConThumb
     2300004: SH_ConThumbs
@@ -233,6 +235,7 @@ ModelImporter:
     2300010: SH_Hand
     2300012: SH_Hold
     2300014: SH_RotArm
+    2300016: phone
     3300000: SH_Arm
     3300002: SH_ConThumb
     3300004: SH_ConThumbs
@@ -241,6 +244,7 @@ ModelImporter:
     3300010: SH_Hand
     3300012: SH_Hold
     3300014: SH_RotArm
+    3300016: phone
     4300000: SH_Hold
     4300002: SH_Arm
     4300004: SH_Hand
@@ -250,6 +254,7 @@ ModelImporter:
     4300012: SH_Finger
     4300014: SH_RotArm
     4300016: Arm_Mesh
+    4300018: phone
     7400000: Arm_Armature|Idle
     7400002: Arm_Armature|IdleWithWeapon
     7400004: Arm_Armature|PunchLeft
@@ -257,6 +262,8 @@ ModelImporter:
     7400008: Arm_Armature|Run
     7400010: Arm_Armature|Swing01
     7400012: Arm_Armature|Swing02
+    7400014: phone|CubeAction
+    7400016: Arm_Armature|CubeAction
     9500000: //RootNode
     13700000: Arm_Mesh
   materials:
