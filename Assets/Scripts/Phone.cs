@@ -9,6 +9,7 @@ public class Phone : MonoBehaviour {
 	public GameObject flashlight;
 	public GameObject map;
 	public GameObject flashlightL;
+	public GameObject phoneLight;
 	public UnityEngine.UI.Text powerLevel;
 	public float lightPower;
 	public float mapPower;
@@ -27,8 +28,10 @@ public class Phone : MonoBehaviour {
 		if (animator.GetCurrentAnimatorStateInfo (0).IsName ("armUp") && !screenOn) {
 			topBar.SetActive (true);
 			home.SetActive (true);
+			phoneLight.SetActive (true);
 			screenOn = true;
 		} else if (animator.GetCurrentAnimatorStateInfo (0).IsName ("TurningPhoneOff")&&screenOn&&animator.GetCurrentAnimatorStateInfo(0).normalizedTime > .275) {
+			phoneLight.SetActive (false);
 			topBar.SetActive (false);
 			home.SetActive (false);
 			screenOn = false;
