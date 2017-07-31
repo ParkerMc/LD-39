@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_move : MonoBehaviour {
 	public float sensitivity = 50f;
 	public float jumpSpeed = 60f;
+	public AudioSource footstepSource;
 
 	public static bool move = true;
 
@@ -25,6 +26,8 @@ public class Player_move : MonoBehaviour {
 				speed = 2f;
 			}
 			rb.velocity = ((Zaxes * new Vector3 (Camera.main.transform.forward.x,0,Camera.main.transform.forward.z)) + ( Xaxes * new Vector3 (Camera.main.transform.right.x,0,Camera.main.transform.right.z))) * Time.deltaTime  * speed * sensitivity + new Vector3 (0, rb.velocity.y, 0);
+
+			footstepSource.pitch = new Vector2 (Xaxes, Zaxes).magnitude * speed;
 			//Jump
 			//if (Input.GetButton ("Jump") && Physics.Raycast (transform.position, -Vector3.up, disToGround + 0.1f)) {
 			//	rb.AddForce (Vector3.up * jumpSpeed);
