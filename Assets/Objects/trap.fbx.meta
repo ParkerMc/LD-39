@@ -6,10 +6,15 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: boards
     400000: //RootNode
+    400002: boards
     2300000: //RootNode
+    2300002: boards
     3300000: //RootNode
+    3300002: boards
     4300000: floor-trap
+    4300002: boards
   materials:
     importMaterials: 1
     materialName: 0
