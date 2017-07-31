@@ -6,6 +6,7 @@ public class Player_move : MonoBehaviour {
 	public float sensitivity = 50f;
 	public float jumpSpeed = 60f;
 	public AudioSource footstepSource;
+	public GameObject resetText;
 
 	public static bool move = true;
 
@@ -16,6 +17,12 @@ public class Player_move : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		if (Input.GetKeyDown (KeyCode.R)) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene (1);
+		}
+		if (transform.localPosition.y < -10) {
+			resetText.SetActive (true);
+		}
 		if(move){
 			//Move along x and z
 			float Xaxes =  Input.GetAxis("Horizontal");

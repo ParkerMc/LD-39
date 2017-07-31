@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour {
 	public GameObject play;
 	public GameObject howToPlay;
 	public GameObject exit;
+	public GameObject howToPlayScreen;
 
 	public void onPlay(){
 		UnityEngine.SceneManagement.SceneManager.LoadScene (1);
@@ -16,6 +17,15 @@ public class Menu : MonoBehaviour {
 		play.SetActive (false);
 		howToPlay.SetActive (false);
 		exit.SetActive (false);
+		howToPlayScreen.SetActive (true);
+	}
+
+	public void onBack(){
+		gameName.SetActive (true);
+		play.SetActive (true);
+		howToPlay.SetActive (true);
+		exit.SetActive (true);
+		howToPlayScreen.SetActive (false);
 	}
 	public void onExit(){
 		Application.Quit ();
