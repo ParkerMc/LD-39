@@ -48,10 +48,12 @@ public class Power : MonoBehaviour {
 				animationDone = false;
 				flashlightOn = false;
 				animator.SetBool ("flashlight", false);
+				animator.SetBool ("armUp", false);
 			} else {
 				animationDone = false;
 				flashlightOn = true;
 				animator.SetBool ("flashlight", true);
+				animator.SetBool ("armUp", true);
 			}
 		}
 		if (!animationDone) {
@@ -67,6 +69,7 @@ public class Power : MonoBehaviour {
 			if (!HasPower()) {
 				flashlight.enabled = false;
 				flashlightOn = false;
+				//Todo make power off at once
 				animator.SetBool ("flashlight", false);
 			}
 		}
