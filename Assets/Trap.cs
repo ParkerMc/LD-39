@@ -7,8 +7,11 @@ public class Trap : MonoBehaviour {
 	 
 	public float speed = 10;
 
-	void OnCollisionStay(Collision collisionInfo) {
-		fall = true;
+	void OnTriggerEnter(Collider other) {
+		if (fall == false) {
+			this.GetComponent<AudioSource> ().Play ();
+			fall = true;
+		}
 	}
 	void FixedUpdate(){
 		if (fall) {
