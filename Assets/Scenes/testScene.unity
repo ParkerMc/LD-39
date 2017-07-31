@@ -2673,7 +2673,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.00032, z: 100.00032}
   m_Children: []
   m_Father: {fileID: 1916020248}
-  m_RootOrder: 60
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &157271382
 BoxCollider:
@@ -5491,17 +5491,17 @@ Transform:
   - {fileID: 1227384751}
   - {fileID: 1405591198}
   - {fileID: 570303637}
+  - {fileID: 2033444236}
+  - {fileID: 500937461}
   - {fileID: 458094966}
   - {fileID: 1669245274}
   - {fileID: 1053344725}
   - {fileID: 58146768}
   - {fileID: 1366636501}
   - {fileID: 895293139}
-  - {fileID: 2033444236}
-  - {fileID: 500937461}
   - {fileID: 562523726}
   m_Father: {fileID: 1916020248}
-  m_RootOrder: 282
+  m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1001 &387988768
 Prefab:
@@ -7943,7 +7943,7 @@ Transform:
   m_LocalScale: {x: 100.00006, y: 100.00058, z: 100.00058}
   m_Children: []
   m_Father: {fileID: 386403819}
-  m_RootOrder: 30
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &500937462
 BoxCollider:
@@ -12591,6 +12591,7 @@ MonoBehaviour:
   flashlight: {fileID: 41759947}
   map: {fileID: 2114977228}
   flashlightL: {fileID: 1214399958}
+  phoneLight: {fileID: 0}
   powerLevel: {fileID: 190819905}
   lightPower: 0.1
   mapPower: 0.5
@@ -14352,7 +14353,7 @@ Transform:
   - {fileID: 1823700673}
   - {fileID: 938362958}
   m_Father: {fileID: 1916020248}
-  m_RootOrder: 69
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &888787636
 Prefab:
@@ -24231,7 +24232,7 @@ Transform:
   m_Children:
   - {fileID: 112153699}
   m_Father: {fileID: 1916020248}
-  m_RootOrder: 214
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1001 &1512354136
 Prefab:
@@ -30143,8 +30144,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 72.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -30854,6 +30855,7 @@ Transform:
   m_Children:
   - {fileID: 1630547045}
   - {fileID: 1367392390}
+  - {fileID: 157271381}
   - {fileID: 1578742213}
   - {fileID: 511041208}
   - {fileID: 1779784174}
@@ -30912,7 +30914,7 @@ Transform:
   - {fileID: 142471275}
   - {fileID: 1889215829}
   - {fileID: 1715789186}
-  - {fileID: 157271381}
+  - {fileID: 886842835}
   - {fileID: 809835829}
   - {fileID: 1949402601}
   - {fileID: 387988769}
@@ -30921,7 +30923,7 @@ Transform:
   - {fileID: 1080813695}
   - {fileID: 130205471}
   - {fileID: 1500217919}
-  - {fileID: 886842835}
+  - {fileID: 1508428363}
   - {fileID: 1400382552}
   - {fileID: 2030818493}
   - {fileID: 1137745052}
@@ -31004,6 +31006,7 @@ Transform:
   - {fileID: 1911883440}
   - {fileID: 808403764}
   - {fileID: 1650667111}
+  - {fileID: 386403819}
   - {fileID: 1482776567}
   - {fileID: 1777983494}
   - {fileID: 523115539}
@@ -31066,7 +31069,6 @@ Transform:
   - {fileID: 1865986687}
   - {fileID: 939822505}
   - {fileID: 847789326}
-  - {fileID: 1508428363}
   - {fileID: 1823964038}
   - {fileID: 704905301}
   - {fileID: 1936924430}
@@ -31134,12 +31136,10 @@ Transform:
   - {fileID: 998249941}
   - {fileID: 1341311759}
   - {fileID: 1498449181}
-  - {fileID: 386403819}
   - {fileID: 213268124}
   - {fileID: 1837624040}
   - {fileID: 1452690263}
   - {fileID: 1104090029}
-  - {fileID: 371128798}
   - {fileID: 1485762813}
   - {fileID: 662736691}
   - {fileID: 841734220}
@@ -31203,6 +31203,7 @@ Transform:
   - {fileID: 674885287}
   - {fileID: 457860423}
   - {fileID: 262902781}
+  - {fileID: 371128798}
   - {fileID: 904690296}
   - {fileID: 625131586}
   - {fileID: 262372062}
@@ -33123,7 +33124,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.00088, z: 100.00088}
   m_Children: []
   m_Father: {fileID: 386403819}
-  m_RootOrder: 29
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2033444237
 BoxCollider:
