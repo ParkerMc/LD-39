@@ -260,6 +260,7 @@ ModelImporter:
     7400014: Arm_Armature|TurnOnPhone
     7400016: Arm_Armature|CubeAction
     7400018: Arm_Armature|TapMap
+    7400020: Arm_Armature|flashlightIdle
     9500000: //RootNode
     13700000: Arm_Mesh
   materials:
