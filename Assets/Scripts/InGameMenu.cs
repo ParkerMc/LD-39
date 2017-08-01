@@ -20,6 +20,18 @@ public class InGameMenu : MonoBehaviour {
 		Application.Quit ();
 	}
 
+	void OnApplicationFocus(bool hasFocus)
+	{
+		if (!hasFocus) {
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+			Player_move.move = false;
+			backToGame.gameObject.SetActive(true);
+			exit.gameObject.SetActive(true);
+			Power.pause = true;
+		}
+	}
+
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)) {
 			Cursor.lockState = CursorLockMode.None;
