@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016418522, g: 0.019191898, b: 0.024407944, a: 1}
+  m_IndirectSpecularColor: {r: 0.016418615, g: 0.019191975, b: 0.024408057, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -53589,11 +53589,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a14e6e0300441919ce19b4539434e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door1: {fileID: 0}
-  door2: {fileID: 0}
-  door3: {fileID: 0}
-  door4: {fileID: 0}
-  doorSpeed: 0
+  door1: {fileID: 572418581}
+  door2: {fileID: 2074123058}
+  door3: {fileID: 1266314430}
+  door4: {fileID: 1366600962}
+  doorSpeed: 2
 --- !u!1001 &1647797456
 Prefab:
   m_ObjectHideFlags: 0
