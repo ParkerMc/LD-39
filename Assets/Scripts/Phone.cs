@@ -45,24 +45,27 @@ public class Phone : MonoBehaviour {
 			flashlight.SetActive (false);
 			flashlightL.SetActive (false);
 			flashlightOn = false;
+		}else if(animator.GetCurrentAnimatorStateInfo (0).IsName("TapMap")&&animator.GetCurrentAnimatorStateInfo (0).normalizedTime > .426&&!mapUp){
+			home.SetActive (false);
+			map.SetActive (true);
+			mapUp = true;
+		}else if(animator.GetCurrentAnimatorStateInfo (0).IsName("MapOff")&&animator.GetCurrentAnimatorStateInfo (0).normalizedTime > .492&&mapUp){
+			home.SetActive (true);
+			map.SetActive (false);
+			mapUp = false;
 		}
 		if (Input.GetKeyDown (KeyCode.M)&&Power.HasPower()) {
 			if (!mapUp) {
 				animator.SetBool ("armUp", true);
 				animator.SetBool ("flashlight", false);
-				home.SetActive (false);
-				map.SetActive (true);
-				mapUp = true;
+				animator.SetBool ("map", true);
 			} else {
 				animator.SetBool ("armUp", false);
-				home.SetActive (true);
-				map.SetActive (false);
-				mapUp = false;
+				animator.SetBool ("map", false);
 			}
 		} else if (Input.GetKeyDown (KeyCode.F)&&Power.HasPower()) {
 			if (!flashlightOn) {
-				map.SetActive (false);
-				mapUp = false;
+				animator.SetBool ("map", false);
 				animator.SetBool ("armUp", true);
 				animator.SetBool ("flashlight", true);
 			} else {
