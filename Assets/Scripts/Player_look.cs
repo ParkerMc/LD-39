@@ -6,14 +6,22 @@ public class Player_look : MonoBehaviour {
 	public float sensitivity = 20;
 	public static bool lockMouse = true;
 
+	private float rotX;
+	private float rotY;
+
 	void Start(){
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 	void FixedUpdate () {
 		if (Cursor.lockState == CursorLockMode.Locked) {
-			float rotX = Input.GetAxis ("Mouse X") * sensitivity * Time.deltaTime;
-			float rotY = Input.GetAxis ("Mouse Y") * sensitivity * Time.deltaTime;
-			transform.localRotation = Quaternion.Euler (transform.localRotation.eulerAngles.x - rotY, transform.localRotation.eulerAngles.y + rotX, 0);
+			rotX += Input.GetAxis ("Mouse X") * sensitivity * Time.deltaTime;
+			rotY -= Input.GetAxis ("Mouse Y") * sensitivity * Time.deltaTime;
+			transform.localRotation = Quaternion.Euler (rotY, rotX, 0);
+
+			if (rotY < -90.0f)
+				rotY = -90.0f;
+			if (rotY > 90.0f)
+				rotY = 90.0f;
 		}
 	}
 }
