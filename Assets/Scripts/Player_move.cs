@@ -27,6 +27,11 @@ public class Player_move : MonoBehaviour {
 			//Move along x and z
 			float Xaxes =  Input.GetAxis("Horizontal");
 			float Zaxes =  Input.GetAxis("Vertical");
+
+			Vector3 movement = new Vector3 (Xaxes, 0.0f, Zaxes).normalized;
+			Xaxes = movement.x;
+			Zaxes = movement.z;
+
 			Rigidbody rb = this.GetComponent<Rigidbody>();
 			float speed = 1f;
 			if (Input.GetButton ("Fire3")) {

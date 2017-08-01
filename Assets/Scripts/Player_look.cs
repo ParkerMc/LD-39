@@ -6,7 +6,7 @@ public class Player_look : MonoBehaviour {
 	public float sensitivity = 20;
 	public static bool lockMouse = true;
 
-	private float rotX;
+	private float rotX = 180.0f;
 	private float rotY;
 
 	void Start(){
