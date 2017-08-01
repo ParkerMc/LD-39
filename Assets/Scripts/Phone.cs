@@ -54,7 +54,7 @@ public class Phone : MonoBehaviour {
 			map.SetActive (false);
 			mapUp = false;
 		}
-		if (Input.GetKeyDown (KeyCode.M)&&Power.HasPower()) {
+		if (Input.GetButtonDown("Fire2")&&Power.HasPower()) {
 			if (!mapUp) {
 				animator.SetBool ("armUp", true);
 				animator.SetBool ("flashlight", false);
@@ -63,7 +63,7 @@ public class Phone : MonoBehaviour {
 				animator.SetBool ("armUp", false);
 				animator.SetBool ("map", false);
 			}
-		} else if (Input.GetKeyDown (KeyCode.F)&&Power.HasPower()) {
+		} else if (Input.GetButtonDown("Fire1")&&Power.HasPower()) {
 			if (!flashlightOn) {
 				animator.SetBool ("map", false);
 				animator.SetBool ("armUp", true);
