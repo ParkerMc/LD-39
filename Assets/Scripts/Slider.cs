@@ -27,7 +27,7 @@ public class Slider : MonoBehaviour {
 		}else if (Input.GetMouseButton(0)) {
 			RaycastHit hit;
 			Vector3 cameraCenter = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width / 2f, Screen.height / 2f, Camera.main.nearClipPlane));
-			if (Physics.Raycast (cameraCenter, Camera.main.transform.forward, out hit, 5)) {
+			if (Physics.Raycast (cameraCenter, Camera.main.transform.forward, out hit, 10)) {
 				GameObject obj = hit.transform.gameObject;
 				Vector2 blank = new Vector2(0,0);
 				Vector2 tile = new Vector2(0,0);
