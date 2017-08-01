@@ -4,20 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Slider : MonoBehaviour {
+	public GameObject door1;
+	public GameObject door2;
+	public GameObject door3;
+	public GameObject door4;
+	public float doorSpeed;
+
+	private bool down = false;
 
 	private int[,] table = new int[3, 3] {
 		{ 2, 7, 5 },
 		{ 4, 8, 3 },
 		{ 6, 1, 9 }
 	};
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		if (Input.GetMouseButton(0)) {
+		if(down&&door1.transform.localPosition.y > -10){
+			door1.transform.localPosition -= new Vector3 (0, doorSpeed*Time.deltaTime, 0);
+			door2.transform.localPosition -= new Vector3 (0, doorSpeed*Time.deltaTime, 0);
+			door3.transform.localPosition -= new Vector3 (0, doorSpeed * Time.deltaTime, 0);
+			door4.transform.localPosition -= new Vector3 (0, doorSpeed * Time.deltaTime, 0);
+		}else if (Input.GetMouseButton(0)) {
 			RaycastHit hit;
 			Vector3 cameraCenter = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width / 2f, Screen.height / 2f, Camera.main.nearClipPlane));
 			if (Physics.Raycast (cameraCenter, Camera.main.transform.forward, out hit, 5)) {
@@ -52,7 +59,7 @@ public class Slider : MonoBehaviour {
 						}
 						obj.transform.localPosition = new Vector3 (y, x, obj.transform.localPosition.z);
 						if (table[0,0] == 1&&table[0,1] == 2&&table[0,2] == 3&&table[1,0] == 4&&table[1,1] == 5&&table[1,2] == 6&&table[2,0] == 7&&table[2,1] == 8&&table[2,2] == 9) {
-							Debug.Log ("Done");
+							down = true;
 						}
 					}
 				}
