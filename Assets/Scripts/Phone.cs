@@ -10,6 +10,7 @@ public class Phone : MonoBehaviour {
 	public GameObject map;
 	public GameObject flashlightL;
 	public GameObject phoneLight;
+	public GameObject reticle;
 	public UnityEngine.UI.Text powerLevel;
 	public float lightPower;
 	public float mapPower;
@@ -30,11 +31,13 @@ public class Phone : MonoBehaviour {
 			home.SetActive (true);
 			phoneLight.SetActive (true);
 			screenOn = true;
+			reticle.SetActive (true);
 		} else if (animator.GetCurrentAnimatorStateInfo (0).IsName ("TurningPhoneOff")&&screenOn&&animator.GetCurrentAnimatorStateInfo(0).normalizedTime > .275) {
 			phoneLight.SetActive (false);
 			topBar.SetActive (false);
 			home.SetActive (false);
 			screenOn = false;
+			reticle.SetActive (false);
 		} else if(animator.GetCurrentAnimatorStateInfo (0).IsName("TurningFlashlightOn")&&animator.GetCurrentAnimatorStateInfo (0).normalizedTime > .426&&!flashlightOn){
 			home.SetActive (false);
 			flashlight.SetActive (true);
